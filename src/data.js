@@ -1,4 +1,4 @@
-const puppyList = [
+export const puppyList = [
   {
     id: 1,
     name: "Sir Waggington",
@@ -68,5 +68,3 @@ const puppyList = [
 ];
 
 //console.log(puppyList);
-
-export default App

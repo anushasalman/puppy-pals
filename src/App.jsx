@@ -6,10 +6,10 @@ function App() {
   const [puppies, setPuppies] = useState(puppyList);
   const [featPupId, setFeatPupId] = useState(null);
   const featuredPup = puppies.find((pup)=> pup.id === featPupId)
-  console.log();
+  console.log(puppies);
 
   function handleClick() {
-    // some logic here
+    // 
   }
 
   return (
