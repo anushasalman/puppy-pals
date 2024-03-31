@@ -1,2 +1,3 @@
+# Puppy Pals Project
 
-https://660334fc92dd1696686ce3e6--rococo-raindrop-787683.netlify.app/
+https://66097b701ddf01891bc4b1cc--euphonious-frangipane-83b1ac.netlify.app/

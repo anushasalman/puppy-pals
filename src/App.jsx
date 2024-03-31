@@ -1,40 +1,34 @@
 import { useState } from 'react';
 import puppyList from './data.js';
-//import './App.css'
+import './App.css'
 
 function App() {
   const [puppies, setPuppies] = useState(puppyList);
-  const [featPupId, setFeatPupId] = useState(null);
-  const featuredPup = puppies.find((pup)=> pup.id === featPupId)
-  console.log(puppyList);
-
-  function handleClick() {
-    // 
-  }
+  const [ourPupId, setOurPupId] = useState(null);
+  const ourPuppy = puppies.find((pup) => pup.id === ourPupId)
+  //console.log(ourPuppy);
 
   return (
 
-    // <div id="root"></div>
-    <div className="App">
-      {puppies.map((puppy) => {
-        return (
-          <p onClick={handleClick} key={puppy.id}>
-            {puppy.name}
-          </p>
-        );
-      })}
-      <p>
-      {featPupId && (
+    <div>
+      {
+        puppies.map((puppy) => {
+          return <p onClick={() => {setOurPupId(puppy.id)}} key={puppy.id}>{puppy.name}</p>
+        })
+      }
+
+      {ourPupId && (
         <div>
-          <h2>{featuredPup.name}</h2>
+          <h2>{ourPuppy.name}</h2>
           <ul>
-            <li>Age: {featuredPup.age}</li>
-            <li>Email: {featuredPup.email}</li>
+            <li>Age: {ourPuppy.age}</li>
+            <li>Email: {ourPuppy.email}</li>
+            <img src="https://thebernedoodles.com/wp-content/uploads/2024/02/Mini-Bernedoodle-Home-Page-Cutout-with-White-Border-2.webp" />
           </ul>
         </div>
       )}
-      </p>
     </div>
-  );
+  )
 }
+
 export default App
